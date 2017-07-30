@@ -69,9 +69,24 @@ function noCheck(event){
   }
 }
 
-
-
 input[3].onclick=noCheck;
+
+var reclutadores=[];
+
+function Reclutador(nombre, email){
+  this.nombre=nombre;
+  this.email=email;
+}
+
+function guardarDatos(){
+  var nombre = input[0].value;
+  var email = input[2].value;
+  var recluta=new Reclutador(nombre, email);
+  reclutadores.unshift(recluta);
+  console.log(reclutadores);
+  localStorage.setItem(nombre,JSON.stringify(email));
+}
+
 
 var submit=document.getElementById("enviar");
 var textarea = document.getElementsByTagName('textarea')[0];
@@ -86,6 +101,7 @@ function envia(event){
     $.post('api/register',{name:input[0].value, empresa:input[1].value, email:input[2].value, msj: textarea.value},(response)=>{
      console.log(response);
    },'json');
+   guardarDatos();
     //limpiar inputs
     for(var i=0; i<input.length;i++){
       input[i].value="";

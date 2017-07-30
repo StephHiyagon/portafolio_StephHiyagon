@@ -4,27 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Esta web muestra parte de mi trabajo como Front-End...Soy Stephanie Hiyagon y te invito a revisar mis proyectos en GitHub, puedes contactar conmigo por mis redes sociales">
+  <meta name="keywords" content="Stephanie, Hiyagon, Front-End, developer, Laboratoria">
   <link rel="shortcut icon" href="assets/img/favicon1.jpg" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lato|Zilla+Slab" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:400,700|Satisfy" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/font/fonts.css">
   <link rel="stylesheet" href="assets/font2/style.css">
   <title>StephHiyagon</title>
 </head>
 <body>
-  <header id="home" class="seccion">
-    <nav class="initial hide-on-small-only">
-      <ul>
-        <li class="center-align"><a href="#home" class=" boton center-align"><span><i class="icon center-align material-icons pink darken-1" role-data="home">perm_identity</i></span>Inicio</a></li>
-        <li class="center-align"><a href="#about" class="boton center-align"><span><i class="icon center-align material-icons purple darken-1" role-data="about">videocam</i></span>Mi historia</a></li>
-        <li class="center-align"><a href="#conocimientos" class="boton center-align"><span><i class="icon center-align material-icons deep-purple lighten-1" role-data="conocimientos">view_list</i></span>Conocimientos</a></li>
-        <li class="center-align"><a href="#portafolio" class="boton center-align"><span><i class="icon center-align material-icons  indigo darken-" role-data="portafolio">web</i></span>Portafolio</a></li>
-        <li class="center-align"><a href="#contacto" class="boton center-align"><span><i class="icon center-align material-icons blue darken-" role-data="contacto">email</i></span>Contáctame</a></li>
-      </ul>
+  <header id="home">
+    <nav class="seccion">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo"><img src="assets/img/logo1.jpg" alt="logo de Stephanie Hiyagon"></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li role-data="home"><a href="#home" >Inicio</a></li>
+          <li role-data="about"><a href="#about" >Sobre Mi</a></li>
+          <li role-data="conocimientos"><a href="#conocimientos">Conocimientos</a></li>
+          <li role-data="portafolio"><a href="#portafolio">Portafolio</a></li>
+          <li role-data="contacto"><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
     </nav>
+
+    <div id="particles-js"></div>
     <nav class="scroll hide-on-small-only">
       <img src="assets/img/logo1.jpg" alt="logo de Stephanie Hiyagon">
       <button class="hamburger white-text black darken-1">&#9776;</button>
@@ -47,25 +53,31 @@
       <button class="cross purple darken-1">&#735;</button>
       <div class="menu">
         <div class="shadow">
-      		     <ul class="menu1 purple darken-1">
-        		     <a href="#home"><li class="pad" role-menu="home">Inicio</li></a>
-        		     <a href="#about"><li role-menu="about">Mi historia</li></a>
-        		     <a href="#conocimientos"><li role-menu="conocimientos">Conocimientos</li></a>
-        		     <a href="#portafolio"><li role-menu="portafolio">Portafolio</li></a>
-        		     <a href="#contacto"><li role-menu="contacto">Contáctame</li></a>
-      		     </ul>
-    	   </div>
+            <ul class="menu1 purple darken-1">
+              <a href="#home"><li class="pad" role-menu="home">Inicio</li></a>
+              <a href="#about"><li role-menu="about">Mi historia</li></a>
+              <a href="#conocimientos"><li role-menu="conocimientos">Conocimientos</li></a>
+              <a href="#portafolio"><li role-menu="portafolio">Portafolio</li></a>
+              <a href="#contacto"><li role-menu="contacto">Contáctame</li></a>
+            </ul>
+          </div>
        </div>
     </nav>
     <div class="imagenPortada">
-      <img class="portada portada2" src="assets/img/flordesayan.jpg" alt="Un caballo pura sangre inglés y Stephanie mirándolo">
-      <img class="portada portada1" src="assets/img/labo12.jpg" alt="Stephanie en Laboratoria">
-      <div class="info">
-        <h1 class="flow-text center-align purple-text name">Stephanie Hiyagon</h1>
-        <h4 class="flow-text center-align white-text prof">Front-End Developer Jr</h4>
-      </div>
-      <div class="in hide-on-small-only">
-        <p class="white-text">"No tengas miedo al cambio, toma las riendas de tu vida, adquiere conocimientos y ten determinación, aumenta el valor de quién eres y sé feliz siempre"-Stephanie Hiyagon .</p>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col s12 hide-on-small-only">
+            <img class="portada portada1" alt="Stephanie en Laboratoria">
+            <h1 class="flow-text center-align pink-text name">Stephanie Hiyagon</h1>
+            <h4 class="flow-text center-align pink-text prof">Front-End Developer Jr</h4>
+            <a class="waves-effect waves-light btn pink darken-1" id="comenzar" role-dest="about">Iniciar</a>
+          </div>
+          <div class="col s12 hide-on-med-and-up portadaMobile">
+            <img class="portada portada1" alt="Stephanie">
+            <h1 class="flow-text center-align white-text name">Stephanie Hiyagon</h1>
+            <h5 class="flow-text center-align white-text prof">Front-End Developer Jr</h5>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -93,7 +105,19 @@
     <div class="container">
       <div class="row">
         <div class="col s10 offset-s1">
-          <h2 class="blue-text center-align">Conocimientos y Habilidades</h2>
+          <h2 class="pink-text center-align">Conocimientos y Habilidades</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 badges">
+          <h5 class="purple-text">Reconocimientos en Laboratoria</h5>
+          <div class="center-align">
+            <a onclick="Materialize.toast('La más agile', 4000)"><img src="assets/img/agile.png" alt="La más agile"></a>
+            <a onclick="Materialize.toast('El mejor squad', 4000)"><img src="assets/img/bestSquad.png" alt="el mejor Squad"></a>
+            <a onclick="Materialize.toast('La mejor del equipo en habilidades blandas', 4000)"><img src="assets/img/bestTeam.png" alt="La mejor del equipo en habilidades blandas"></a>
+            <a onclick="Materialize.toast('Una de las mejores 5 en 2 oportunidades', 4000)"><img src="assets/img/top5.png" alt="Una de las mejores 5 en 2 oportunidades"></a>
+            <a onclick="Materialize.toast('El mejor puntaje técnico', 4000)"><img src="assets/img/unicornio.png" alt="El mejor puntaje técnico"></a>
+          </div>
         </div>
       </div>
       <div class="row">
@@ -117,7 +141,7 @@
           </div>
         </div>
         <div class="col s12 col m4">
-          <div class="deep-purple lighten-1 center-align box">
+          <div class="pink lighten-1 center-align box">
             <i class="iconC center-align material-icons white-text">settings_input_composite</i>
             <ul class="center-align white-text">
               <li>SEO</li>
@@ -132,10 +156,9 @@
           </div>
         </div>
         <div class="col s12 col m4">
-          <div class="indigo darken-1 center-align box">
+          <div class="purple darken-1 center-align box">
             <i class="iconC center-align material-icons white-text">done_all</i>
             <ul class="center-align white-text">
-              <li>Tolerante a la frustración</li>
               <li>Persistente</li>
               <li>Abierta al cambio</li>
               <li>Creo oportunidades</li>
@@ -145,20 +168,6 @@
               <li>Visionaria</li>
             </ul>
           </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col s10 offset-s1 col m12">
-          <ul class="collapsible" data-collapsible="accordion">
-            <li>
-              <div class="collapsible-header"><span class="new badge">6</span><i class="material-icons">person_pin</i>Badges en Laboratoria</div>
-              <div class="collapsible-body"><p>Best Squad</p></div>
-              <div class="collapsible-body"><p>Top 5 - 2 veces</p></div>
-              <div class="collapsible-body"><p>Best Team Player</p></div>
-              <div class="collapsible-body"><p>Unicornio</p></div>
-              <div class="collapsible-body"><p>The Most Agile</p></div>
-            </li>
-          </ul>
         </div>
       </div>
     </div>
@@ -178,28 +187,24 @@
               <div id="slide">
                 <ul>
                   <li>
-                    <img src="assets/img/freelance.jpg" alt="Proyecto de Freelance">
-                    <div class="caption">
-
-                    </div>
+                    <img src="assets/img/freelance.jpg" alt="Proyecto de Freelance en el sprint4">
+                    <!-- <div class="caption">
+                    </div> -->
                   </li>
                   <li>
-                    <img src="assets/img/lyft.jpg" alt="Proyecto de Lyft">
-                    <div class="caption">
-
-                    </div>
+                    <img src="assets/img/lyft.jpg" alt="Proyecto final del sprint3">
+                    <!-- <div class="caption">
+                    </div> -->
                   </li>
                   <li>
-                    <img src="assets/img/labcar.jpg" alt="Proyecto de Labcar">
-                    <div class="caption">
-
-                    </div>
+                    <img src="assets/img/labcar.jpg" alt="Proyecto final del sprint4">
+                    <!-- <div class="caption">
+                    </div> -->
                   </li>
                   <li>
-                    <img src="assets/img/yape2.png" alt="Proyecto de Yape">
-                    <div class="caption">
-
-                    </div>
+                    <img src="assets/img/yape2.png" alt="Proyecto final del sprint5">
+                    <!-- <div class="caption">
+                    </div> -->
                   </li>
                 </ul>
                 <ol id="indicator">
@@ -208,9 +213,9 @@
                   <li role-slide="3"><span class="icon-radio-unchecked"></span></li>
                   <li role-slide="4"><span class="icon-radio-unchecked"></span></li>
                 </ol>
-                <div id="left"><span class="icon-circle-left"></span></div>
-                <div id="right"><span class="icon-circle-right"></span></div>
               </div>
+              <div id="left"><span class="icon-circle-left"></span></div>
+              <div id="right"><span class="icon-circle-right"></span></div>
               <div class="col m4 offset-m8">
                 <div class="descript"></div>
               </div>
@@ -223,7 +228,7 @@
           <div class="tarjeta-wrap">
             <div class="tarjeta">
               <div class="front blue white-text"><img src="assets/img/freelancer.jpg" alt="proyecto de Freelancer" width="100%" height="100%"></div>
-              <div class="back pink white-text valign-wrapper"><p>Proyecto de un ejercicio del Sprint4: Fue uno de los primeros proyectos de diseño que hice; debía tener la apariencia de hbaer usado Bootstrap sin usarlo; también implemente funcionalidades con JS. Puede verlo en éste <a href="https://stephhiyagon.github.io/freelancer/" target="_blank">enlace</a></p></div>
+              <div class="back pink white-text valign-wrapper"><p>Fue uno de los primeros proyectos de diseño que hice; debía tener la apariencia de usar Bootstrap sin usarlo; use flexbox para la maquetación.Al hacer scroll, este evento hará una modificación del navbar. Hay un modal de fotos, al hacer click ocupará toda la pantalla y tendra su propio scroll. Tenemos un formulario validado por JS. <a href="https://stephhiyagon.github.io/freelancer/" target="_blank">Proyecto Freelance</a></p></div>
             </div>
           </div>
         </div>
@@ -231,7 +236,7 @@
           <div class="tarjeta-wrap">
             <div class="tarjeta">
               <div class="front blue white-text"><img src="assets/img/lyft.jpg" alt="proyecto de Lyft" width="100%" height="100%"></div>
-              <div class="back pink white-text valign-wrapper"><p>Proyecto final del Sprint5: Éste es un code review que realizamos al finalizar el sprint; me encargué de hacer las validaciones javascript del formulario. Este fue un gran Sprint para mi pues obtuve el bagde de Unicornio. Puede ver el proyecto en éste <a href="https://stephhiyagon.github.io/lyft-code-review/" target="_blank">enlace</a></p></div>
+              <div class="back pink white-text valign-wrapper"><p>Este proyecto tiene funcionalidades relacionadas al evento scroll, también al hacer click en el primer input esto despliega los demás campos del formulario, el cual tiene validaciones hechas en JS. Usamos video de youtube con su iframe<a href="https://stephhiyagon.github.io/lyft-code-review/" target="_blank">Proyecto Lyft</a></p></div>
             </div>
           </div>
         </div>
@@ -239,15 +244,15 @@
           <div class="tarjeta-wrap">
             <div class="tarjeta">
               <div class="front blue white-text"><img src="assets/img/labcar.jpg" alt="proyecto de Labcar" width="100%" height="100%"></div>
-              <div class="back pink white-text valign-wrapper"><p>Proyecto final del Sprint5: Éste es un code review; en éste Sprint aprendí ha comunicarme con el API de Google Maps; use bootstrap para todo el diseño. Me encargue de la barra de navegación.Puede verlo en éste <a href="https://stephhiyagon.github.io/LabCar-CodeReview/" target="_blank">enlace</a></p></div>
+              <div class="back pink white-text valign-wrapper"><p>El proyecto consistió en hacer una página web que ofrece el servicio de taxi, dar la ubicación actual del usuario y le permite colocar de que punto a que punto se dirige, además da la tarifa; para lo cual use el API de google Maps.En el proyecto se uso Bootstrap.<a href="https://stephhiyagon.github.io/LabCar-CodeReview/" target="_blank">Proyecto Labcar</a></p></div>
             </div>
           </div>
         </div>
         <div class="col s10 offset-s1 col m6">
           <div class="tarjeta-wrap">
             <div class="tarjeta">
-              <div class="front white white-text"><img src="assets/img/yape1.png" alt="proyecto de Yape" width="100%" height="100%"></div>
-              <div class="back pink white-text valign-wrapper"><p>Proyecto final del Sprint5: Éste proyecto se baso en replicar ciertas pantallas del App YApe. Fue un proyecto con muchos retos técnicos, había que conectarse a un API para guardar la información del cliente; usar componentes y diseñarlo para mobile. </p></div>
+              <div class="front white white-text"><img src="assets/img/yape5.jpg" alt="proyecto de Yape" width="100%" height="100%"></div>
+              <div class="back pink white-text valign-wrapper"><p>Este proyecto se baso en replicar ciertas pantallas del App Yape. Fue un proyecto con muchos retos técnicos, había que conectarse a un API para guardar la información del cliente, al cual se le solicitaba información en cada paso con su respectiva validación;utilice componentes y lo diseñe para mobile. </p></div>
             </div>
           </div>
         </div>
@@ -258,16 +263,15 @@
     <div class="container">
       <div class="row">
         <div class="col s10 offset-s1">
-          <h2 class="center-align blue-text">Contáctame</h2>
+          <h2 class="center-align pink-text">Contáctame</h2>
         </div>
-
       </div>
       <div class="row">
         <div class="col s10 offset-s1 col m3">
           <div class="quote-container">
             <i class="pin"></i>
-            <blockquote class="note yellow">
-            Éste es mi correo: mv.hiyagon@gmail.com; mi celular: 932457259. Serías tan amable de dejarme tus datos llenando el formulario. Mira mi <a href="assets/cv/cv.StephanieHiyagon.pdf" class="blue-text" target="_blank"> cv.</a> Gracias.
+            <blockquote class="note acent">
+            Este es mi correo: mv.hiyagon@gmail.com y mi celular: 932457259. Si deseas contactarte conmigo deja tus datos en el formulario. También puedes revisar mi <a href="assets/cv/cv.StephanieHiyagon.pdf" class="blue-text" target="_blank"> cv.</a> Gracias.
             <cite class="author">Stephanie Hiyagon</cite>
             </blockquote>
           </div>
@@ -297,7 +301,7 @@
               <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
               <label for="filled-in-box">Autorizo recibir su cv </label>
             </p>
-            <button class="btn waves-effect waves-light" type="submit" name="action" id="enviar">Enviar
+            <button class="btn pink darken-1 waves-effect waves-light" type="submit" name="action" id="enviar">Enviar
               <i class="material-icons right">send</i>
             </button>
           </form>
@@ -319,5 +323,7 @@
   <script src="assets/js/main.js" charset="utf-8"></script>
   <script src="assets/js/media.js" charset="utf-8"></script>
   <script src="assets/js/form.js" charset="utf-8"></script>
+  <script src="assets/js/particles.js" charset="utf-8"></script>
+  <script src="assets/js/app.js" charset="utf-8"></script>
 </body>
 </html>

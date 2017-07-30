@@ -1,10 +1,15 @@
-$(".scroll").hide();
-$(".name").hide();
-$(".prof").hide();
-$(".in").hide();
-$( ".cross" ).hide();
-$( ".menu" ).hide();
-$(".social").hide();
+$(document).ready(function(){
+
+  $(".scroll").hide();
+  $( ".menu" ).hide();  
+  $( ".cross" ).hide();
+  $(".social").hide();
+
+  var aleatory = Math.ceil(Math.random()*10);
+  console.log(aleatory);
+
+  $('.portada1').attr('src',"assets/img/portada"+aleatory+".jpg");
+});
 
 $( ".hamburger" ).click(function() {
 $( ".menu" ).fadeToggle( "fast", function() {
@@ -24,16 +29,7 @@ $(".shadow").on('click', close);
 $(".cross").on('click', close);
 
 
-$(".portada1").on({
-    mouseover:function(){
-      $('.info').fadeOut("1500");
-      $('.in').fadeIn("1500");
-    },
-    mouseout:function(){
-      $('.info').fadeIn("1500");
-      $('.in').fadeOut("1500");
-    }
-  })
+
 
 $(window).scroll(function(e) {
     const cursorY = $(window).scrollTop();
@@ -46,8 +42,8 @@ $(window).scroll(function(e) {
       $('.scroll').hide();
       $('.initial').show();
     }
-
-    if(cursorY>=580 && cursorY<=1570){
+    // if(cursorY>=580 && cursorY<=1570){
+    if(cursorY>=580){
       $('.social').show();
     }else{
       $('.social').hide();
@@ -121,42 +117,47 @@ $( () => {
       avanzar();
     }
 
-  },4200);//el metodo hide() y fadeIn() tienen 400ms por defecto...en total demora 5 segundos
+  },3000);//el metodo hide() y fadeIn() tienen 400ms por defecto...en total demora 3.4 segundos
 
 });
 
- $('.seccion i').on("click", function(e) {
+ $('.seccion li').on("click", function(e) {
    e.preventDefault();
     console.log("desplaza");
+    console.log(e.target);
     var height= $(".scroll").outerHeight(true);
     console.log(height);
     var target ='#'+ $(this).attr("role-data");
     console.log(target);
 
-    $('html,body').animate({scrollTop: $(target).offset().top - height*1.9}, 2000);
+    $('html,body').animate({scrollTop: $(target).offset().top - height}, 1200);
     return false;
 
    });
 
-   $('.menu li').on("click", function(e) {
+   $('.menu1 li').on("click", function(e) {
      e.preventDefault();
-      console.log("desplaza");
+      console.log("desplaza del toogle");
+      console.log(e.target)
       var height= $(".scroll").outerHeight(true);
       console.log(height);
       var target ='#'+ $(this).attr("role-menu");
       console.log(target);
 
-      $('html,body').animate({scrollTop: $(target).offset().top - height}, 2000);
+      $('html,body').animate({scrollTop: $(target).offset().top - height}, 1200);
       close();
       return false;
-
      });
 
+     $('#comenzar').on("click", function(e) {
+       e.preventDefault();
+        console.log("desplaza");
+        var height= $(".scroll").outerHeight(true);
+        console.log(height);
+        var target ='#'+ $(this).attr("role-dest");
+        console.log(target);
 
+        $('html,body').animate({scrollTop: $(target).offset().top - height}, 800);
+        return false;
 
-$(document).ready(function(){
-      $(".name").fadeIn(1500);
-      $(".prof").fadeIn(1500);
-      // $('.seccion').scrollSpy();
-
-    });
+       });
