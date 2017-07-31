@@ -13,14 +13,20 @@
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/font/fonts.css">
   <link rel="stylesheet" href="assets/font2/style.css">
-  <title>StephHiyagon</title>
+  <title>Portfolio de Steph Hiyagon</title>
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+   (function(){
+      emailjs.init("user_mOC58Dk1x7DYaSgzOGu9W");
+   })();
+</script>
 </head>
 <body>
   <header id="home">
     <nav class="seccion">
       <div class="nav-wrapper">
         <a href="#" class="brand-logo"><img src="assets/img/logo1.jpg" alt="logo de Stephanie Hiyagon"></a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <ul id="nav-mobile" class="right hide-on-small-only">
           <li role-data="home"><a href="#home" >Inicio</a></li>
           <li role-data="about"><a href="#about" >Sobre Mi</a></li>
           <li role-data="conocimientos"><a href="#conocimientos">Conocimientos</a></li>
@@ -85,7 +91,7 @@
     <div class="container">
       <div class="row">
         <div class="col s10 offset-s1">
-          <h2 class="center-align white-text">Yo soy...</h2>
+          <h2 class="center-align white-text">Sobre Mi</h2>
         </div>
       </div>
       <div class="row">
@@ -188,23 +194,15 @@
                 <ul>
                   <li>
                     <img src="assets/img/freelance.jpg" alt="Proyecto de Freelance en el sprint4">
-                    <!-- <div class="caption">
-                    </div> -->
                   </li>
                   <li>
                     <img src="assets/img/lyft.jpg" alt="Proyecto final del sprint3">
-                    <!-- <div class="caption">
-                    </div> -->
                   </li>
                   <li>
                     <img src="assets/img/labcar.jpg" alt="Proyecto final del sprint4">
-                    <!-- <div class="caption">
-                    </div> -->
                   </li>
                   <li>
                     <img src="assets/img/yape2.png" alt="Proyecto final del sprint5">
-                    <!-- <div class="caption">
-                    </div> -->
                   </li>
                 </ul>
                 <ol id="indicator">
@@ -277,7 +275,7 @@
           </div>
         </div>
         <div class="col s12 col m6 offset-m3">
-          <form action="#">
+          <form id="myform" method="post">
             <div class="input-field col s12">
               <input id="first_name" type="text" class="validate">
               <div class="spanI red-text">wrong</div>
@@ -289,7 +287,7 @@
               <label for="last_name" data-error="wrong" data-success="right">Nombre de la Empresa</label>
             </div>
             <div class="input-field col s12">
-              <input id="email" type="email" class="validate">
+              <input id="email" type="email" name ="email" class="validate">
               <div class="spanI red-text">wrong</div>
               <label for="email" data-error="wrong" data-success="right">Email</label>
             </div>

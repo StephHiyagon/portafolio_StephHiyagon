@@ -24,7 +24,7 @@ header > nav{
 #particles-js{
   position: absolute;
   z-index: 1;
-  height: 75vh;
+  height: 90vh;
   width:100%;
 }
 
@@ -79,13 +79,13 @@ div.portadaMobile img{
 }
 
 
-div.in{
+/*div.in{
   position:absolute;
   top:20%;
   right:2%;
   width:30%;
   font-size: 2rem;
-}
+}*/
 
 
 div.imagenPortada h1{
@@ -115,12 +115,12 @@ div.imagenPortada a{
 }
 
 #comenzar:hover{
-  background-color: rgba(255,255,255,1) !important;
-  color:purple;
+  background-color: rgba(255,255,255,0.1) !important;
+  color:black;
   font-weight: 900;
   font-size:1em;
   font-family:'Roboto Slab', serif;
-  border:2px solid purple;
+  border:2px solid black;
 }
 
 
@@ -211,6 +211,7 @@ nav.mobile img{
 section#about {
   background-color: rgba(0, 0, 0, 0.5);
   height:100%;
+  position:relative;
 }
 
 /*redes*/
@@ -250,6 +251,23 @@ p{
   font-size:5rem;
 }
 
+/*div#sobremi{
+  position: relative;
+}*/
+
+#overlay{
+  position: absolute;
+  width: 50%;
+  color: #fff;
+  top: 40%;
+  left: 25%;
+  background-color: rgba(249,1,212,0.3);
+}
+
+
+.none{
+  display:none;
+}
 /*Conocimientos*/
 
 div.badges img{
@@ -540,6 +558,9 @@ footer.black p{
 
 
 @media (max-width: 768px){
+  nav .brand-logo{
+    left:28%;
+  }
   div.info{
     left:2%;
   }

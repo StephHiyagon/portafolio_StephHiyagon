@@ -98,9 +98,9 @@ function envia(event){
   if(input[0].value!="" && input[1].value!="" && input[2].value!="" && input[3].checked){
     console.log("todo lo requerido no esta vacio!");
     //post para enviar la data
-    $.post('api/register',{name:input[0].value, empresa:input[1].value, email:input[2].value, msj: textarea.value},(response)=>{
-     console.log(response);
-   },'json');
+  //   $.post('api/register',{name:input[0].value, empresa:input[1].value, email:input[2].value, msj: textarea.value},(response)=>{
+  //    console.log(response);
+  //  },'json');
    guardarDatos();
     //limpiar inputs
     for(var i=0; i<input.length;i++){

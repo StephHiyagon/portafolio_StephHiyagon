@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
   $(".scroll").hide();
-  $( ".menu" ).hide();  
+  $( ".menu" ).hide();
   $( ".cross" ).hide();
   $(".social").hide();
 
@@ -149,15 +149,37 @@ $( () => {
       return false;
      });
 
-     $('#comenzar').on("click", function(e) {
-       e.preventDefault();
-        console.log("desplaza");
-        var height= $(".scroll").outerHeight(true);
-        console.log(height);
-        var target ='#'+ $(this).attr("role-dest");
-        console.log(target);
+    $('#comenzar').on("click", function(e) {
+      e.preventDefault();
+      console.log("desplaza");
+      var height= $(".scroll").outerHeight(true);
+      console.log(height);
+      var target ='#'+ $(this).attr("role-dest");
+      console.log(target);
 
-        $('html,body').animate({scrollTop: $(target).offset().top - height}, 800);
-        return false;
+      $('html,body').animate({scrollTop: $(target).offset().top - height}, 800);
+      return false;
+    });
 
-       });
+    //correo
+  var submit=document.getElementById("enviar");
+  var myform = $("form#myform");
+  submit.addEventListener('click',function(event){
+	event.preventDefault();
+  var nombre = input[0].value;
+  var email = input[2].value;
+  var textarea = document.getElementsByTagName('textarea')[0];
+  // Change to your service ID, or keep using the default service
+  var service_id = "default_service";
+  var template_id = "portfoliosh";
+
+  myform.find("button").text("Sending...");
+  emailjs.send(service_id,template_id,{name:input[0].value, empresa:input[1].value, email:input[2].value, msj: textarea.value})
+  .then(function(response) {
+   console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+   myform.find("button").text("Sent!!!");
+  }, function(err) {
+   console.log("FAILED. error=", err);
+  });
+  return false;
+});
